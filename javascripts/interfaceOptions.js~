@@ -1,0 +1,87 @@
+
+
+var spaceShowing = false;
+
+
+function showSpace(){
+
+//alert("will show the shit");
+
+
+//first make the scrolly thing smller
+$('#scrollArea').attr('class', 'span6');
+
+//then make space area much bigger
+//$('#spaceArea').attr('class', 'span4');
+
+
+//trying it with display
+$('#spaceArea').css("display", "inline-block" );
+
+//then show the space area
+//$('#spaceArea').css("visibility", "visible" );
+
+
+}
+
+
+function hideSpace(){
+
+//alert("will show the shit");
+
+//trying it with display
+$('#spaceArea').css("display", "none" );
+
+
+//first make the scrolly thing smller
+$('#scrollArea').attr('class', 'span12');
+
+//then make space area much bigger
+//$('#spaceArea').attr('class', 'span4');
+
+
+
+
+//then show the space area
+//$('#spaceArea').css("visibility", "visible" );
+
+
+}
+
+
+
+
+
+
+
+
+
+ function interOptions(){
+ 
+ $('#spaceButton').mousedown(function(event) {
+ 
+ if (spaceShowing == false){
+ 
+ showSpace();
+ spaceShowing = true;
+ $('#spaceButton').text("No, it's hideous, hide the Space Invaders interface.");
+ 
+ } else{
+ 
+ hideSpace();
+ spaceShowing = false;
+ $('#spaceButton').text("Try the strange Space Invaders interface (pre-pre-alpha)");
+ 
+ }
+ 
+ });
+ 
+ }
+ 
+ 
+ 
+  $(document).ready(function() {
+  
+	interOptions();
+});
+

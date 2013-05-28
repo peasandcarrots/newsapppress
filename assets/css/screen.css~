@@ -1,0 +1,272 @@
+/* line 1 */
+
+
+
+
+#savedArea {
+   /*  background-color: blue; */
+ }
+ 
+ #shotArea {
+ 
+   /*   background-color: red; */
+   
+ }
+ 
+ 
+
+ .titlesMid{
+/*  text-align: center;*/
+ 
+ }
+ 
+
+ /* new version has the space invaders part not displayed by default */
+
+#spaceArea {
+display: none;
+
+
+text-align: center;
+
+}
+
+
+
+
+
+.scrollExpl {
+text-align: center;
+
+}
+
+
+ 
+ 
+ /* making this one to act as temp logo */
+#diffLogo {
+font-size: 2.5em;
+text-align: center;
+font-weight: normal;
+line-height: 1.2em;
+margin-top: 0.75em;
+margin-bottom: 0.7em;
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+
+
+  
+
+ 
+ #left {
+   position: relative;
+   width:49%;
+   /*margin-right: 85px;*/
+   background-color: red;
+   
+   background-color: green;
+   /*border: 1px solid #999999;*/
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   border-radius: 5px;
+ }
+ 
+ #right {
+   float:right;
+   position: relative;
+   text-align: left;
+   width:49%;
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   border-radius: 5px;
+ }
+ 
+ 
+ 
+ #first {
+      color: #604848;
+   float:left;
+   position: relative;
+   text-align: left;
+   background-color: #C0D860;
+   width:49%;
+   border: 1px solid #999999;
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   border-radius: 5px;
+}
+ 
+ 
+ #second {
+      color:#C0D860;
+
+   float:right;
+   position: relative;
+   text-align: left;
+   background-color: #604848;
+   width:49%;
+   border: 1px solid #999999;
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   border-radius: 5px;
+}
+ 
+ 
+ 
+ #third {
+      color: white;
+
+   float:left;
+   position: relative;
+   text-align: center;
+   background-color: #607848;
+   width:49%;
+   border: 1px solid #999999;
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   border-radius: 5px;
+}
+ 
+ 
+ #fourth {
+      color: white;
+
+   float:right;
+   position: relative;
+   text-align: center;
+   background-color: #607848;
+   width:49%;
+   border: 1px solid #999999;
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   border-radius: 5px;
+}
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ .chartDivs {
+        width : 200px;
+        height: 120px;
+        margin: 8px auto;
+   
+ }
+
+
+.onTop {
+
+position:relative; 
+top:-14px; 
+left:5; 
+color:green; 
+font-size:37px; 
+z-index:4;
+       
+   
+ }
+.tick {
+
+position:relative; 
+top:-30px; 
+left:5; 
+color:green; 
+font-size:37px; 
+z-index:5;
+       
+   
+ }
+.cross {
+
+position:relative; 
+top:-30px; 
+left:5; 
+color:red; 
+font-size:37px; 
+z-index:6;
+       
+   
+ }
+
+ 
+ #container2 {
+        width : 600px;
+        height: 384px;
+        margin: 8px auto;
+      }
+ 
+ 
+  #container3 {
+        width : 200px;
+        height: 120px;
+        margin: 8px auto;
+      }
+ 
+ #rightOfCanv {
+   color: black;
+
+   float:right;
+   position: relative;
+   text-align: left;
+   background-color: #789048;
+   width:65%;
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   border-radius: 5px;
+
+ }
+ 
+ 
+ #aroundCan {
+          /*temporary for aligning the heading height with the one on right */
+   padding-top:5px;
+   color: white;
+   position: relative;
+   text-align: center;
+   background-color: #607848;
+   width:34%;
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   border-radius: 5px;
+       /*to separate from bottom two divs */
+    margin-bottom: 5em;
+
+ }
+ 
+ #forCan {
+   
+   margin: 0px auto;
+   float: center;
+   position: relative;
+   text-align: center;
+   background-color: #607848;
+   /*width:98%; */
+    /*now making the div as wide as canvas */
+   width: 480px;
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   border-radius: 5px;
+ }
+ 
+ 
+
+ 
+     /*this one is just the same as fourth, made to put it below fourth */
+ #fourthBelow {
+      color: white;
+
+   float:right;
+   position: relative;
+   text-align: center;
+   background-color: #607848;
+   width:49%;
+   border: 1px solid #999999;
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   border-radius: 5px;
+}

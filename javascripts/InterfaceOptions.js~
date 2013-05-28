@@ -1,0 +1,28 @@
+
+function showSpace(){
+
+$('#spaceArea').css(
+
+
+}
+
+
+
+
+ function interOptions(){
+ 
+ $('#spaceButton').mousedown(function(event) {
+ 
+ showSpace();
+ 
+ }
+ 
+ }
+ 
+ 
+ 
+  $(document).ready(function() {
+  
+	interOptions();
+});
+

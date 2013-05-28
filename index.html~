@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Twitter Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/css/docs.css" rel="stylesheet">
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+
+<!-- garbadditions.  this one not yet minified etc -->
+	<link rel="stylesheet" href="assets/css/scroll.css" />
+	<link rel="stylesheet" href="assets/css/screen.css" />
+
+
+
+  </head>
+
+  <body data-spy="scroll" data-target=".subnav" data-offset="50">
+
+
+  <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button"class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="./index.html">Bootstrap</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active">
+                <a href="./index.html">Home</a>
+              </li>
+              <li class="">
+                <a href="./index.html#whatis">What is this?</a>
+              </li>
+              <li class="">
+                <a href="mailto:asdf@asdf.com?subject=Comment%20about%20bayesian%20news">Say Hello</a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+<!-- Masthead
+================================================== -->
+<header class="jumbotron masthead">
+  <div class="inner">
+    <h1>Train your own news channel</h1>
+    <p>Teach Bayesian News Classifier which stories you find interesting and get increasingly accurate advice on what other stories to read.</p>
+    <p class="download-info">
+     
+            <a  id="spaceButton" class="btn btn-large btn-info" >Try the strange Space Invaders interface (pre-pre-alpha)</a>
+    </p>
+
+    
+  </div>
+
+  
+</header>
+
+<hr class="soften">
+
+<div class="marketing">
+  
+  <div class="row">
+  
+  <!-- REMEMBER: need to make space area originally TINY so rest can show scroll in middle while space area is hidden -->
+    <div id="spaceArea" class="span6">
+
+      <h2>Shoot the boring stories, save the interesting ones.</h2>
+      <p>Press Ctrl to shoot them or Shift to send them a parachute.  Use the <- and -> arrows to move around.  This is just an alternative interface with the same underlying methods.</p>
+      
+      
+      <div id = "forCan"> </div>
+
+      
+      
+    </div>
+    
+    <div id="scrollArea" class="span12">
+
+      <h2 class="scrollExpl">Separate the interesting from the boring.</h2>
+      <p class="scrollExpl">Click with the left mouse button on the interesting stories, click the middle mouse button on the boring stories.  Be patient, the site learns from your actions.</p>
+      
+       <div class="tweetContainer">
+        <ul id="tw"></ul>
+    	</div>
+    	
+    </div>
+    
+    
+    
+    
+    
+    
+  </div><!--/row-->
+  
+  <div class="row">
+    
+    
+    <div id="savedArea" class="span6">
+
+      <h2 class="titlesMid">Stories you found interesting</h2>
+      
+      <ul id="savedCompanies" >
+    </ul>
+    </div>
+    <div  id="shotArea" class="span6">
+
+      <h2 class="titlesMid">Stories you rejected</h2>
+      <ul id="shotCompanies" >
+        
+    </ul>
+      
+    </div>
+  </div><!--/row-->
+ 
+ 
+
+  <hr class="soften">
+
+  <h1 id="whatis">What is this?</h1>
+  <p class="marketing-byline">An experiment in strange User Interface ideas.  An attempt to study whether Naive Bayesian classifiers can augment interterfaces by helping users find more relevant content in the context of heterogenous news information from user-contributed sources such as Twitter.  </p>
+  
+  <p class="marketing-byline">The news stories are sourced using the Twitter Search API.</p>
+  
+    <p class="marketing-byline">For questions/comments, email <a href="mailto:asdf@asdf.com?subject=Comment%20about%20bayesian%20news">here.</a></p>
+  
+
+</div><!-- /.marketing -->
+
+     <!-- Footer
+      ================================================== -->
+      <footer class="footer">
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        
+      </footer>
+
+    </div><!-- /container -->
+
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/google-code-prettify/prettify.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+    <script src="assets/js/application.js"></script>
+    
+    
+    <!-- garbadditions  -->
+
+<script type="text/javascript" src="getTweet.js"></script>
+<script type="text/javascript" src="scrolly.js"></script>
+<script language="javascript" src="javascripts/jquery.hotkeys.js" type="text/javascript"></script>
+<script language="javascript" src="javascripts/key_status.js" type="text/javascript"></script>
+<script language="javascript" src="javascripts/util.js" type="text/javascript"></script>
+<script language="javascript" src="javascripts/sprite.js" type="text/javascript"></script>
+<script language="javascript" src="javascripts/sound.js" type="text/javascript"></script>
+ 
+<script language="javascript" src="javascripts/classifier/lib/require.js" type="text/javascript"></script>
+<script language="javascript" src="javascripts/classifier/lib/classifier-0.1.0.min.js" type="text/javascript"></script>
+<script language="javascript" src="javascripts/classifier/lib/bayesian.js" type="text/javascript"></script>
+<script language="javascript" src="javascripts/interfaceToClassifier.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="modIndex.js"></script>
+<script type="text/javascript" src="javascripts/interfaceOptions.js"></script>
+    
+    
+
+
+  </body>
+</html>

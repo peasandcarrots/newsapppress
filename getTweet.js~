@@ -1,0 +1,178 @@
+/*
+ * NAME:	jQuery Twitter Feed Function
+ * AUTHOR:	Jay Blanchard
+ * DATE:	2011-09-25
+ * 
+ * USAGE:	Include to call tweets into a web page
+ * 
+ * NOTE:	Different than the function in the book, going after a certain #hashtag
+ */
+
+
+
+	function getTheShite(){
+		
+		
+		
+		console.log("get the shit called");
+		//shouldnt go back to 0
+			//ite=0;
+
+   $.getJSON('http://search.twitter.com/search.json?rpp=150&callback=?&result_type=recent&q=%23news' ,function(data){
+        for(var i=0;i<data.results.length;i++){
+        	var tweeter = data.results[i].from_user;
+        	var tweetText = 'batch'+batchNumber + 'i = '+ i + data.results[i].text;
+		//temp getting rid of formatting shite
+		//alert(tweetText);
+        	//var tweetText = tweetText.substring(0, 139);
+        	//tweetText = tweetText.replace(/http:\/\/\S+/g, '<a href="$&" target="_blank">$&</a>');
+		//	tweetText = tweetText.replace(/(@)(\w+)/g, ' $1<a href="http://twitter.com/$2" target="_blank">$2</a>');
+		//	tweetText = tweetText.replace(/(#)(\w+)/g, ' $1<a href="http://search.twitter.com/search?q=%23$2" target="_blank">$2</a>');
+            //uncommenting this for new scroll div
+		$('#tw').append('<li class="tweet btn batch' + batchNumber +' "><div class="tweetImage"><a href="http://twitter.com/'+tweeter+'" target="_blank"><img src="'+data.results[i].profile_image_url+'" width="48" border="0" /></a></div><div class="tweetBody">'+tweetText+'</div><div class = "ticksAndCrosses"><div class=\"tick\"><a href=\"#\"> &#10004</a> </div><div class=\"cross\"><a href=\"#\">X</a></div></div></div></li>');    
+		
+		tweets[i] = tweetText;
+		//autoScroll();
+		//console.log(tweetText);
+
+        }
+	
+	//trying to combine this with the spaceinv
+	compNames = tweets;
+	
+	console.log("data results length is " +data.results.length);
+
+	
+	tweetsAvailable = data.results.length;
+	console.log("tweets av changed to " + tweetsAvailable);
+	
+	tweetsPushedSoFar = 0;
+	console.log("tweetsPushedSoFar changed to " + tweetsPushedSoFar);
+
+	//this is a bit messy, should do all this more OO like
+	compIndex = 0;
+		console.log("compIndex changed from getTweet to  " +compIndex);
+
+	//moving this below onmousedown event handler
+	// batchNumber ++;
+
+
+
+  
+  //putting the slide up thing here for now.
+  
+ // $(".tweet").click(function () {
+  //   $(this).slideUp();
+  //  });
+  
+
+                         var elementToRemove;
+
+
+//changed. now binding the mousedown eventhandler to batch0, batch1, .....
+	var batchClassUpTo = 'batch'+batchNumber;
+	//alert(batchClassUpTo); 	
+
+    $('.' + batchClassUpTo ).mousedown(function(event) {
+    switch (event.which) {
+        case 1:
+		//alert($(this).find(".tweetBody").text());
+		tweetTextToInclude = $(this).find(".tweetBody").text();
+		//alert(tweetTextToInclude);
+	    //alert($(this).html());
+		includeCompanyName(tweetTextToInclude, "saved");
+		elementToRemove =   $(this);
+	      
+	       elementToRemove.slideUp();
+	    setInterval(function() {
+	
+	    elementToRemove.remove();
+	    
+
+		    console.log("remove called");
+	    }, 2000);
+	    
+
+            break;
+        case 2:
+	     elementToRemove =   $(this);
+	    tweetTextToInclude = elementToRemove.find(".tweetBody").text();
+	    //alert(tweetTextToInclude);
+		includeCompanyName(tweetTextToInclude, "shot");
+	    
+	      
+	   // setInterval(function() {
+	    console.log(elementToRemove);
+	
+	    elementToRemove.remove();
+	    
+
+		    console.log("remove called");
+	    //}, 100);
+	    	//       elementToRemove.slideUp();
+
+            break;
+        case 3:
+	    alert('No, not the Right mouse button, the Left or the Middle please');
+		
+
+            break;
+        default:
+            alert('No, not that mouse button, the right or the left');
+    }
+});
+
+    
+  
+     batchNumber ++;
+
+	
+
+   });
+   
+ 
+   
+   
+   
+   }
+   
+   
+    
+    
+    
+    
+    //moved the code for autoScrolly to a new file called scrolly.js
+   
+   
+   
+   
+   /* make the carousel scroll automatically when the page loads */
+  // var moveScroll = setInterval(autoScroll, 2000);
+
+
+   
+   
+   console.log("from outside"); 
+
+   
+   
+   //structure has been changed.  now getTheShite called from here.
+   
+   	$(document).ready(function() {
+	tweets = [];
+		ite=0;
+
+	
+	getTheShite();
+   
+   
+//ready function closing
+});
+
+
+
+
+
+   
+   
+    

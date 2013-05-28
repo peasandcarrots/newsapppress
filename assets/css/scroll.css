@@ -1,0 +1,48 @@
+/* styling for the twitter feed scroll */
+.tweetContainer {
+
+     /*doing some font styling here since screen much smaller now */ 
+     color: #000;
+  font-family: Helvetica Neue, Helvetica, Verdana, Arial, sans-serif;
+  font-size: 12px;
+
+    margin: 0px auto;
+    width: 300px;
+    
+     /*changing this from 28.5 to 27.5 to not let bit of 6th seen */ 
+    height: 27.5em; /* total visible tweets, in this case set to 5 */ 
+    overflow: hidden; /*keep tweets outside of the container from being seen */
+}
+#tw {
+    width: 300px;
+    position: relative;
+    list-style-type: none;
+    top: -6em; /* allows a tweet to be moved into hidden space before scrolling into view */
+    margin: 0px;
+    padding: 0px;
+}
+.tweetImage {
+    float: left;
+    padding-right: 1em;
+}
+.tweet {
+    height: 6em;
+    padding-top: 0.3em;
+    font-size: 0.9em;
+    border-bottom: 1px solid #333333;
+}
+
+/*trying to put in the tick and cross */
+.tick {
+    font-size: 40px;
+    float: left;
+    padding-right: 1em;
+}
+
+
+
+.ticksAndCrosses {
+    float: right;
+    display: none;
+   /* <!-- padding-right: 1em; -->*/
+}
